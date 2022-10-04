@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import img from './spoon.png'
 import click from './click.png'
 import background from './background.jpg'
 import  { useMediaQuery } from 'media-query-react'
@@ -57,13 +56,10 @@ function Imagediv(){
 
         {isMobile && 
         <>
-            <Slogan>
-            You can't <br/>
-            eat here <br/>
-            just <br/>
-           <u style={{textDecorationColor:'white'}}> once.</u>
-        </Slogan>
-        <img style={style.imagestyle} src={img} alt="spoon_image"></img>
+         <Slogan desktop >
+                You can't eat here just<u style={{textDecorationColor:'green'}}> once.</u>
+            </Slogan>
+            <OrderNow><img src={click} style={style.imagestyle} alt="click_image"/>Order Now!</OrderNow>
         </>
         }
         {
