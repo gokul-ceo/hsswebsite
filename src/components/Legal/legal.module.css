@@ -1,0 +1,93 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.tcmaindiv {
+    overflow: auto;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tcmaindiv h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.tcmaindiv h2 {
+    font-size: 20px;
+}
+
+.tcmaindiv h3 {
+    font-size: 18px;
+    background-color: #D32626;
+    color: white;
+    font-weight: 500;
+    width: max-content;
+    padding: 5px;
+    text-shadow: -2px -1px 5px rgba(248, 248, 248, 0.6);
+}
+
+.tcmaindiv::-webkit-scrollbar {
+    display: none;
+}
+
+.ppmaindiv::-webkit-scrollbar {
+    display: none;
+}
+
+.rpmaindiv {
+    overflow: auto;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.rpmaindiv h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.ppmaindiv h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.rpmaindiv h3 {
+    font-size: 18px;
+    background-color: #D32626;
+    color: white;
+    font-weight: 500;
+    width: max-content;
+    padding: 5px;
+    text-shadow: -2px -1px 5px rgba(248, 248, 248, 0.6);
+}
+
+.ppmaindiv h3 {
+    font-size: 18px;
+    background-color: #D32626;
+    color: white;
+    font-weight: 500;
+    width: max-content;
+    padding: 5px;
+    text-shadow: -2px -1px 5px rgba(248, 248, 248, 0.6);
+}
+
+.ppmaindiv {
+    overflow: auto;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .tcmaindiv h3 {
+        font-size: 18px;
+        background-color: #D32626;
+        color: white;
+        font-weight: 500;
+        width: 100%;
+        padding: 5px;
+        text-shadow: -2px -1px 5px rgba(248, 248, 248, 0.6);
+    }
+}

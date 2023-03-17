@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+:root {
+    --primary: #D32626;
+    --secondary: #79D70F;
+    --tertiary: #F5A31A;
+    --white: #EDF4F2;
+}
+
+.orderonlinemaindiv {
+    background-color: white;
+    color: #D32626;
+    font-family: 'Karla', sans-serif;
+    font-size: 35px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.orderonlinemaindiv img {
+    /* height: 300px;
+    width: 300px; */
+}
+
+.orderonlinemaindiv span {
+    display: block;
+    font-weight: bolder;
+}
+
+.orderonlinemaindiv button {
+    color: white;
+    border: none;
+    background-color: #D32626;
+}
+
+.orderonlinemaindiv button img {
+    height: 40px;
+    width: 40px;
+
+}

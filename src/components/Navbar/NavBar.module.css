@@ -1,0 +1,54 @@
+:root {
+    --primary: #D32626;
+    --secondary: #79D70F;
+    --tertiary: #F5A31A;
+    --white: #EDF4F2;
+}
+
+#navbarhss {
+    background-color: var(--primary);
+}
+
+.brandlogo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.navlistele {
+    font-size: 20px;
+
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.navlistele:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.navlistele a {
+    text-decoration: none;
+}
+
+.mobilenavlistele {
+    font-size: 1px;
+
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.mobilenavlistele:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    margin-right: 10px;
+}

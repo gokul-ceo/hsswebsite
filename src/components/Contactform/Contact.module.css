@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+:root {
+    --primary: #D32626;
+    --secondary: #79D70F;
+    --tertiary: #F5A31A;
+    --white: #EDF4F2;
+}
+
+.main {
+    /* background-color: palegreen; */
+
+}
+
+.main input {
+    width: 100%;
+    font-size: 18px;
+    margin: 10px auto;
+    height: 50px;
+    font-family: 'Karla', sans-serif;
+
+}
+
+.main textarea {
+    width: 100%;
+    font-family: 'Karla', sans-serif;
+
+}
+
+.main span {
+    display: block;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
+
+}
+
+.agreediv {
+    /* background-color: #79D70F; */
+
+    text-align: center;
+}
+
+.agreediv input {
+    justify-self: center;
+    align-self: center;
+}
+
+.agreediv span {
+    /* color: rebeccapurple; */
+    margin-left: 5px;
+    /* display: block; */
+}
+
+.agreediv button {
+    display: block;
+    margin: 20px auto 0 auto;
+    border: none;
+    background-color: #D32626;
+    color: #EDF4F2;
+    font-size: 18px;
+    border-radius: 7px;
+    width: 100px;
+    font-family: 'Karla', sans-serif;
+
+
+}
+
+.errordiv {
+    background-color: white;
+    color: #D32626;
+}
+
+@media only screen and (max-width: 767px) {
+    .main input {
+        width: 100%;
+        font-size: 18px;
+        margin: 20px auto;
+        height: 50px;
+        font-family: 'Karla', sans-serif;
+
+    }
+
+    .main textarea {
+        width: 100%;
+        font-family: 'Karla', sans-serif;
+
+    }
+
+    .main span {
+        display: block;
+        font-size: 18px;
+        font-family: 'Karla', sans-serif;
+
+    }
+
+    .agreediv {
+        /* background-color: #79D70F; */
+
+        text-align: center;
+    }
+
+    .agreediv input {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .agreediv span {
+        /* color: rebeccapurple; */
+        margin-left: 5px;
+        /* display: block; */
+    }
+
+    .agreediv button {
+        display: block;
+        margin: 20px auto 0 auto;
+        border: none;
+        background-color: #D32626;
+        color: #EDF4F2;
+        font-size: 18px;
+        border-radius: 7px;
+        width: 100px;
+        font-family: 'Karla', sans-serif;
+
+
+    }
+
+    .errordiv {
+        background-color: white;
+        color: #D32626;
+    }
+}
