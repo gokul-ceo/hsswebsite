@@ -11,7 +11,6 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CLOSE_ALERT, SHOW_CONTACT_FORM } from "../../Redux/OrdercofigSlice";
 import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
 function Alertdiv(props) {
   const dispatch = useDispatch();
   const [match, setmatch] = useState(
@@ -44,11 +43,6 @@ function Alertdiv(props) {
   }
 }
 function Functionorderdiv(props) {
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.75,
-  };
   const welcometext = useRef(null);
   // const [visble, setvisble] = useState(false);
   const [visible, setvisible] = useState(false);

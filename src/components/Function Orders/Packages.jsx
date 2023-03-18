@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import style from "./Functionorder.module.css";
 import next from "./rednext.svg";
 function Packages(props) {
-  const [visibile, setvisible] = useState(false);
   const item = useRef(null);
   useEffect(() => {
     const node = item.current;
@@ -11,7 +10,7 @@ function Packages(props) {
         entries.forEach((entry) => {
           console.log(entry);
           // item.current.classList.add(style.test);
-          setvisible(entry.isIntersecting);
+          // setvisible(entry.isIntersecting);
         });
       },
       { threshold: 0.75 }

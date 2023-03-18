@@ -3,6 +3,9 @@ import styles from "./NavBar.module.css";
 import logo from "../../hss.png";
 import { Link } from "react-router-dom";
 function NavBar(props) {
+  function handlelogin() {
+    // window.open("http://localhost:5000/auth/login", "_self");
+  }
   return (
     <nav
       id={styles.navbarhss}
@@ -51,9 +54,22 @@ function NavBar(props) {
               Contact us
             </a>
 
-            <a className={styles.navlistele} href="..">
+            <Link
+              to="/signup"
+              onClick={handlelogin}
+              className={styles.navlistele}
+              href=".."
+            >
               Sign up
-            </a>
+            </Link>
+            <Link
+              to="/login"
+              onClick={handlelogin}
+              className={styles.navlistele}
+              href=".."
+            >
+              Login
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+/* font-family: 'Karla', sans-serif; */
 :root {
     --primary: #D32626;
     --secondary: #79D70F;
@@ -18,6 +21,7 @@
 .navlistele {
     font-size: 20px;
 
+    font-family: 'Karla', sans-serif;
     text-decoration: none;
     color: white;
     margin-left: 15px;

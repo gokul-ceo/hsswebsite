@@ -10,6 +10,8 @@ import Tc from "./components/Legal/Tc";
 import Privacypolicy from "./components/Legal/Privacypolicy";
 import Refundpolicy from "./components/Legal/Refundpolicy";
 import OnlineOrderPage from "./components/Onlineorder/Onlineorderpage";
+import Signuppage from "./components/Authentication/Signuppage";
+import Loginpage from "./components/Authentication/Loginpage";
 function App(props) {
   return (
     <>
@@ -23,6 +25,8 @@ function App(props) {
             <Route path="/termsandconditions" element={<Tc />} />
             <Route path="/privacypolicy" element={<Privacypolicy />} />
             <Route path="/refundpolicy" element={<Refundpolicy />} />
+            <Route path="/signup" element={<Signuppage />} />
+            <Route path="/login" element={<Loginpage />} />
           </Routes>
         </Router>
       </Provider>

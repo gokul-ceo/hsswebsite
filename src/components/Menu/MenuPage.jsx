@@ -62,9 +62,9 @@ function MenuPage(props) {
   const toggleOffCanvas = () => {
     setShowOffCanvas(!showOffCanvas);
   };
-  const [width, setWindowWidth] = useState(0);
-  const [cartshow, setcartshow] = useState(true);
-  const [cartbtn, setcartbtn] = useState(false);
+  // const [width, setWindowWidth] = useState(0);
+  // const [cartshow, setcartshow] = useState(true);
+  // const [cartbtn, setcartbtn] = useState(false);
   useEffect(() => {
     async function Menufetch() {
       dispatch(Info_Fetch_Menu());
@@ -80,32 +80,32 @@ function MenuPage(props) {
     }
     Menufetch();
   }, [dispatch]);
-  useEffect(() => {
-    updateDimensions();
+  // useEffect(() => {
+  //   updateDimensions();
 
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-  useEffect(() => {
-    if (Orderarray.length > 0) {
-      setcartbtn(true);
-    } else {
-      setcartbtn(false);
-    }
-  }, []);
+  //   window.addEventListener("resize", updateDimensions);
+  //   return () => window.removeEventListener("resize", updateDimensions);
+  // }, []);
+  // useEffect(() => {
+  //   if (Orderarray.length > 0) {
+  //     setcartbtn(true);
+  //   } else {
+  //     setcartbtn(false);
+  //   }
+  // }, [Orderarray.length]);
   useEffect(() => {
     console.log("OrderArray:", Orderarray);
   }, [Orderarray]);
-  const updateDimensions = () => {
-    const width = window.innerWidth;
+  // const updateDimensions = () => {
+  //   const width = window.innerWidth;
 
-    if (width < 1200) {
-      setcartshow(false);
-    } else {
-      setcartshow(true);
-    }
-    setWindowWidth(width);
-  };
+  //   if (width < 1200) {
+  //     setcartshow(false);
+  //   } else {
+  //     setcartshow(true);
+  //   }
+  //   setWindowWidth(width);
+  // };
   const [cartitems, setcartitems] = useState([]);
   const [query, setquery] = useState("");
   useEffect(() => {
@@ -131,25 +131,7 @@ function MenuPage(props) {
   useEffect(() => {
     console.log("Cartitems list:", cartitems);
   }, [cartitems]);
-  function CartBox(props) {
-    const { itemname, quantity, price } = props;
-    const handleDeleteItem = () => {
-      dispatch(Updatemenuitem(itemname));
-    };
-    return (
-      <>
-        <div className={menustyle.cartitembox}>
-          <span>{itemname}</span>
-          <span>{quantity}</span>
-          <span>{price}</span>
-          <img onClick={handleDeleteItem} src={rmv} alt="delete" />
-        </div>
-      </>
-    );
-  }
-  function updatecart(array) {
-    console.log("Array recived:", array);
-  }
+
   return (
     <>
       <div
@@ -221,17 +203,19 @@ function MenuPage(props) {
             </div>
           </div>
 
-          <img
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
-            }}
-            className={menustyle.topbtn}
-            src={up}
-            alt="Up_arrow"
-          />
+          {!match && (
+            <img
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              className={menustyle.topbtn}
+              src={up}
+              alt="Up_arrow"
+            />
+          )}
         </div>
 
         {/* <OffCanvas
