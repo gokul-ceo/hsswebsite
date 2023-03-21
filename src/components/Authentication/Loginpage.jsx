@@ -10,12 +10,12 @@ function Loginpage(props) {
   }
   useEffect(() => {
     window.otpless = (otplessUser) => {
-      const waName = otplessUser.waName;
-      const waNumber = otplessUser.waNumber;
-      alert("WaName:", waName);
-      alert("WaNumber:", waNumber);
+      console.log("Otp obje:", otplessUser);
+      console.log(otplessUser.waName);
+      console.log(otplessUser.waNumber);
     };
   }, []);
+
   //   useEffect(() => {
   //     if (customerphone.length >= 11) {
   //       seterror("Mobile number should be 10 digits.");
