@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./authpage.module.css";
 
 function Loginpage(props) {
@@ -8,6 +8,12 @@ function Loginpage(props) {
     seterror("");
     setcustomerphone(e.target.value);
   }
+  useEffect(() => {
+    window.otpless = (otplessUser) => {
+      const waName = otplessUser.waName;
+      const waNumber = otplessUser.waNumber;
+    };
+  }, []);
   //   useEffect(() => {
   //     if (customerphone.length >= 11) {
   //       seterror("Mobile number should be 10 digits.");
