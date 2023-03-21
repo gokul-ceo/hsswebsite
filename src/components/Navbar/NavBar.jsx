@@ -3,9 +3,9 @@ import styles from "./NavBar.module.css";
 import logo from "../../hss.png";
 import { Link } from "react-router-dom";
 function NavBar(props) {
-  function handlelogin() {
-    // window.open("http://localhost:5000/auth/login", "_self");
-  }
+  // function handlelogin() {
+  //   // window.open("http://localhost:5000/auth/login", "_self");
+  // }
   function scrollTocontact() {
     var contactsession = document.getElementById("contact");
     contactsession.scrollIntoView({ behavior: "smooth" });

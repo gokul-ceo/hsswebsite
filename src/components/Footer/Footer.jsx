@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../App.module.css";
-import logo from "../../hss.png";
+// import logo from "../../hss.png";
 import { Link } from "react-router-dom";
 function HFooter(props) {
   const [match, setmatch] = useState(
@@ -23,6 +23,7 @@ function HFooter(props) {
         >
           {!match && (
             <div
+              id="contact"
               className={match ? styles.morelinkdiv : styles.mobilemorelinkdiv}
             >
               <h6>Our Location</h6>

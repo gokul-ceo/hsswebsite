@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import style from "./authpage.module.css";
 import { Link } from "react-router-dom";
 import gi from "./googleicon.svg";
-import spin from "./Spin.svg";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Signuppage(props) {
@@ -11,7 +10,6 @@ function Signuppage(props) {
   const [error, seterror] = useState("");
 
   const [nameerror, setnameerror] = useState(false);
-  const [submitmessage, setsubmitmessage] = useState("");
   const [loading, setloading] = useState(false);
   const [disable, setdisable] = useState(true);
   const [Userdetails, setUserdetails] = useState({
@@ -50,7 +48,6 @@ function Signuppage(props) {
       setdisable(true);
     }
   }, [Userdetails]);
-  const notify = () => toast("Wow its working");
   function handlesumbit(e) {
     e.preventDefault();
 
@@ -88,9 +85,6 @@ function Signuppage(props) {
         <div className={style.inputentrydiv}>
           <h1>Sign up</h1>
           {nameerror && <span style={{ color: "red" }}>{nameerror}</span>}
-          {submitmessage && (
-            <span style={{ color: "darkgreen" }}>{submitmessage}</span>
-          )}
           <span>Enter your username:</span>
           <input
             className={style.fun}
