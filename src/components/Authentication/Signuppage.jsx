@@ -2,12 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import style from "./authpage.module.css";
 import { Link } from "react-router-dom";
 import gi from "./googleicon.svg";
+import spin from "./Spin.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Signuppage(props) {
   const nameinputref = useRef(null);
   const [error, seterror] = useState("");
 
   const [nameerror, setnameerror] = useState(false);
   const [submitmessage, setsubmitmessage] = useState("");
+  const [loading, setloading] = useState(false);
   const [disable, setdisable] = useState(true);
   const [Userdetails, setUserdetails] = useState({
     customername: "",
@@ -20,6 +25,9 @@ function Signuppage(props) {
       seterror("Please enter 10 digit mobile number.");
     }
   }, [Userdetails.customerphone]);
+  function handlelogin() {
+    window.open("http://localhost:5000/auth/login", "_self");
+  }
   function handlechange(e) {
     seterror("");
     setnameerror(false);
@@ -42,8 +50,10 @@ function Signuppage(props) {
       setdisable(true);
     }
   }, [Userdetails]);
+  const notify = () => toast("Wow its working");
   function handlesumbit(e) {
     e.preventDefault();
+
     if (Userdetails.customername === "" || Userdetails.customerphone === "") {
       setnameerror("Please fill all the fields!");
     } else if (Userdetails.customerphone.length !== 10) {
@@ -51,7 +61,25 @@ function Signuppage(props) {
     } else if (!Userdetails.customeragreed) {
       setnameerror("Agree to the terms and conditions to continue..");
     } else {
-      setsubmitmessage("Successfully Created a Account!");
+      setloading(true);
+      console.log("Userdetails:", Userdetails);
+      fetch("http://localhost:5000/user/new", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Userdetails),
+      })
+        .then((response) => {
+          response.json();
+          if (response.ok) {
+            toast.success("Successfully signed up!");
+          } else {
+            toast.error(`Couldn't sign up!`);
+          }
+        })
+        .then((data) => {
+          setloading(false);
+          return data;
+        });
     }
   }
   return (
@@ -106,12 +134,21 @@ function Signuppage(props) {
             </span>
           </div>
           <button disabled={disable} onClick={handlesumbit}>
-            Sign Up
+            {loading ? (
+              <div
+                class="spinner-border text-light spinner-border-sm"
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            ) : (
+              "Sign Up"
+            )}
           </button>
           <span style={{ alignSelf: "center" }}>Or</span>
 
           <div className={style.googlebtn} style={{ textAlign: "center" }}>
-            <button>
+            <button onClick={handlelogin}>
               {" "}
               <img src={gi} alt="google_icon" />
               Continue with Google

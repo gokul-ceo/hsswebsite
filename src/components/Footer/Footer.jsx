@@ -51,6 +51,7 @@ function HFooter(props) {
           </div>
           {match && (
             <div
+              id="contact"
               className={match ? styles.morelinkdiv : styles.mobilemorelinkdiv}
             >
               <h6>Our Location</h6>
@@ -79,9 +80,9 @@ function HFooter(props) {
           <Link to="/privacypolicy">Privacy Policy</Link>
           <Link to="/refundpolicy">Refund Policy</Link>
         </div>
-        <span>Design & developed by Sri Saravana</span>
+        <span>Designed & Developed by Mealmate.io</span>
         <span style={{ display: "block" }}>
-          copyright ©️ {new Date(Date.now()).getFullYear()}
+          copyright ©️ {new Date(Date.now()).getFullYear()} All Rights reserved
         </span>
       </div>
     </>

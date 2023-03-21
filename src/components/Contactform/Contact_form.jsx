@@ -87,7 +87,15 @@ function Contactform(props) {
               I agree to <Link>Terms&conditions</Link> and{" "}
               <Link>Privacy Policy</Link>
             </span>
-            <button onClick={handlesubmit}>Done</button>
+            <div style={{ display: "flex" }} className={style.btngroup}>
+              <button
+                style={{ backgroundColor: "white", color: "#D32626" }}
+                onClick={() => dispatch(SHOW_CONTACT_FORM())}
+              >
+                Close
+              </button>
+              <button onClick={handlesubmit}>Done</button>
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer>

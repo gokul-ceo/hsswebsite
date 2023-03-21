@@ -6,6 +6,10 @@ function NavBar(props) {
   function handlelogin() {
     // window.open("http://localhost:5000/auth/login", "_self");
   }
+  function scrollTocontact() {
+    var contactsession = document.getElementById("contact");
+    contactsession.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <nav
       id={styles.navbarhss}
@@ -44,16 +48,20 @@ function NavBar(props) {
               Menu
             </Link>
 
-            <a className={styles.navlistele} href="#.">
-              Bulk Order
-            </a>
-            <a className={styles.navlistele} href="..">
-              My orders
-            </a>
-            <a className={styles.navlistele} href="#.">
+            {/* <a className={styles.navlistele} href="#.">
+              Bulk Order <small className={styles.cmslable}>comming soon</small>
+            </a> */}
+            {/* <a className={styles.navlistele} href="..">
+              My Account
+            </a> */}
+            <a
+              className={styles.navlistele}
+              onClick={scrollTocontact}
+              href="#."
+            >
               Contact us
             </a>
-
+            {/* 
             <Link
               to="/signup"
               onClick={handlelogin}
@@ -69,7 +77,7 @@ function NavBar(props) {
               href=".."
             >
               Login
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

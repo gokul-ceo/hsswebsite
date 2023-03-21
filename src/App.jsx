@@ -12,10 +12,14 @@ import Refundpolicy from "./components/Legal/Refundpolicy";
 import OnlineOrderPage from "./components/Onlineorder/Onlineorderpage";
 import Signuppage from "./components/Authentication/Signuppage";
 import Loginpage from "./components/Authentication/Loginpage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App(props) {
   return (
     <>
       <Provider store={Store}>
+        <ToastContainer />
         <Router>
           <NavBar />
           <Routes>

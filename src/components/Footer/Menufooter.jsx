@@ -23,7 +23,7 @@ function Menufooter(props) {
             match ? menustyle.menufootercrdiv : menustyle.mobilemenufootercrdiv
           }
         >
-          <span>Design & developed by Sri Saravana</span>
+          <span></span>
           <span style={{ display: "block" }}>
             copyright ©️ {new Date(Date.now()).getFullYear()}
           </span>

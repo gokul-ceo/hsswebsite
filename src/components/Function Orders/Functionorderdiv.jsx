@@ -74,7 +74,7 @@ function Functionorderdiv(props) {
   const [scrollAmount, setscrollAmount] = useState(0);
   useEffect(() => {
     // let scrollAmount = 0;
-    const scrollStep = 1;
+    const scrollStep = 0.4;
     const scrollInterval = setInterval(() => {
       if (scrollableDivRef.current) {
         scrollableDivRef.current.scrollLeft = scrollAmount;
@@ -85,7 +85,7 @@ function Functionorderdiv(props) {
           setscrollAmount(0);
         }
       }
-    }, 25);
+    }, 10);
 
     return () => {
       clearInterval(scrollInterval);
@@ -114,7 +114,7 @@ function Functionorderdiv(props) {
                 </span>
               </div>
               <button onClick={() => dispatch(SHOW_CONTACT_FORM())}>
-                Contact us <img src={next} alt="arrow" />{" "}
+                Request a Call <img src={next} alt="arrow" />{" "}
               </button>
             </p>
           ) : (
@@ -130,7 +130,7 @@ function Functionorderdiv(props) {
                 </span>
               </div>
               <button onClick={() => dispatch(SHOW_CONTACT_FORM())}>
-                Contact us <img src={next} alt="arrow" />{" "}
+                Request a Call <img src={next} alt="arrow" />{" "}
               </button>
             </p>
           )}

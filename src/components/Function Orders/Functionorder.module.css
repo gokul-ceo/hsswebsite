@@ -194,6 +194,10 @@
     font-size: 20px;
 }
 
+.agreediv .btngroup {
+    display: flex;
+}
+
 @media only screen and (max-width: 767px) {
     .maindiv {
         /* padding: 2rem; */
@@ -254,6 +258,7 @@
         /* width:  */
         /* white-space: nowrap; */
         overflow: scroll;
+        overflow-x: hidden;
         padding: 10px;
         /* scroll-behavior: smooth; */
 

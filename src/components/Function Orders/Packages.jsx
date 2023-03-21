@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import style from "./Functionorder.module.css";
 import next from "./rednext.svg";
+import { useDispatch } from "react-redux";
+import { SHOW_CONTACT_FORM } from "../../Redux/OrdercofigSlice";
 function Packages(props) {
+  const dispatch = useDispatch();
   const item = useRef(null);
   useEffect(() => {
     const node = item.current;
@@ -27,7 +30,11 @@ function Packages(props) {
         <div className={style.pkgdetail_div}>
           <p>We can provide food & snacks based on your requirements daily.</p>
         </div>
-        <button>
+        <button
+          onClick={() => {
+            dispatch(SHOW_CONTACT_FORM());
+          }}
+        >
           Contact us <img src={next} alt="arrow" />{" "}
         </button>
         <small id="notes">

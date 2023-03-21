@@ -12,6 +12,7 @@
     background-color: var(--primary);
 }
 
+
 .brandlogo {
     height: 100px;
     width: 100px;
@@ -55,4 +56,33 @@
     color: white;
     margin-left: 15px;
     margin-right: 10px;
+}
+
+.cmslable {
+    position: absolute;
+    top: 5px;
+    left: 210px;
+    background-color: white;
+    color: #D32626;
+    font-weight: bold;
+    font-size: 10px;
+    width: 65px;
+    border-radius: 7px;
+}
+
+@media only screen and (max-width: 767px) {
+    .cmslable {
+        position: absolute;
+        top: 95px;
+        left: 120px;
+        background-color: white;
+        color: #D32626;
+        font-weight: bold;
+        font-size: 10px;
+
+        /* padding: 1px; */
+
+        border-radius: 7px;
+    }
+
 }
