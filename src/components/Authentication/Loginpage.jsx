@@ -12,8 +12,8 @@ function Loginpage(props) {
     window.otpless = (otplessUser) => {
       const waName = otplessUser.waName;
       const waNumber = otplessUser.waNumber;
-      console.log("WaName:", waName);
-      console.log("WaNumber:", waNumber);
+      alert("WaName:", waName);
+      alert("WaNumber:", waNumber);
     };
   }, []);
   //   useEffect(() => {
