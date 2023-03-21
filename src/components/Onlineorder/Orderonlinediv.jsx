@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Orderonline.module.css";
-import next from "./next.svg";
+// import next from "./next.svg";
 import icon from "./delivery-icon.png";
 function Orderonlinediv(props) {
   return (

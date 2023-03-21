@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import menustyle from "./menupage.module.css";
-import { Button, Offcanvas } from "react-bootstrap";
+import { Offcanvas } from "react-bootstrap";
 import rmv from "./delete.png";
 import { useDispatch, useSelector } from "react-redux";
 import { Updatemenuitem } from "../../Redux/OrderArraySlice";
@@ -11,7 +11,7 @@ import {
 
 const OffCanvas = (props) => {
   const dispatch = useDispatch();
-  const Paymentmode = useSelector((state) => state.Orderconfig.Paymentmode);
+  // const Paymentmode = useSelector((state) => state.Orderconfig.Paymentmode);
   const Orderarray = useSelector((state) => state.Orderarray.OrderArray);
   const [cash, setcash] = useState(false);
   const [upi, setupi] = useState(false);

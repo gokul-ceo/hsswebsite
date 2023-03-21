@@ -1,18 +1,18 @@
 import React from "react";
 import { Home } from "./Home";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MenuPage from "./components/Menu/MenuPage";
 import NavBar from "./components/Navbar/NavBar";
 import Store from "./Redux/Store";
 import { Provider } from "react-redux";
-import HFooter from "./components/Footer/Footer";
+// import HFooter from "./components/Footer/Footer";
 import Tc from "./components/Legal/Tc";
 import Privacypolicy from "./components/Legal/Privacypolicy";
 import Refundpolicy from "./components/Legal/Refundpolicy";
 import OnlineOrderPage from "./components/Onlineorder/Onlineorderpage";
 import Signuppage from "./components/Authentication/Signuppage";
 import Loginpage from "./components/Authentication/Loginpage";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App(props) {

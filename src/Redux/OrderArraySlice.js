@@ -21,7 +21,7 @@ export const OrderArraySlice = createSlice({
         state.totalCost += total;
       } else {
         state.OrderArray.push(action.payload);
-        var total = action.payload.quantity * action.payload.price;
+        total = action.payload.quantity * action.payload.price;
         state.totalCost += total;
         console.log("Item doesn't exist, so adding!");
       }

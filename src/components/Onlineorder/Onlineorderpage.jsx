@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "../../App.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { CHOOSE_ORDER_MODE } from "../../Redux/OrdercofigSlice";
-import HFooter from "../Footer/Footer";
-import Menufooter from "../Footer/Menufooter";
+// import HFooter from "../Footer/Footer";
+// import Menufooter from "../Footer/Menufooter";
 function OnlineOrderPage(props) {
-  const year = new Date().getFullYear();
+  // const year = new Date().getFullYear();
   const dispatch = useDispatch();
   // const [ordertype, setordertype] = useState("takeaway");
   const ordertype = useSelector((state) => state.Orderconfig.Ordermode);

@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import menustyle from "./menupage.module.css";
 import Menubox from "./Menubox";
-import open from "./slideup.png";
-import rmv from "./delete.png";
+// import open from "./slideup.png";
+// import rmv from "./delete.png";
 import up from "./up-arrow-svgrepo-com.svg";
 import mobileinfo from "./mobileinfo.png";
-import OffCanvas from "./Cartcanvas";
+// import OffCanvas from "./Cartcanvas";
 import { useDispatch, useSelector } from "react-redux";
-import { Addmenuitem, Updatemenuitem } from "../../Redux/OrderArraySlice";
-import Breakfast from "./Breakfast";
+import { Addmenuitem } from "../../Redux/OrderArraySlice";
+// import Breakfast from "./Breakfast";
 import {
   Info_Fetch_Menu,
   Info_Fetch_Menu_FAILURE,
   Info_Fetch_Menu_SUCCESS,
 } from "../../Redux/Menuavailablereducer";
-import Menufooter from "../Footer/Menufooter";
+// import Menufooter from "../Footer/Menufooter";
 function MenuPage(props) {
   // const bf_catagory = ['Idly','Dosa','Pongal','All']
   // cosnt l_catagory = ['Meals','Variety Rice','']
@@ -36,10 +36,10 @@ function MenuPage(props) {
   }, [match]);
   const dispatch = useDispatch();
   const Orderarray = useSelector((state) => state.Orderarray.OrderArray);
-  const totalcost = useSelector((state) => state.Orderarray.totalCost);
+  // const totalcost = useSelector((state) => state.Orderarray.totalCost);
   const Menulist = useSelector((state) => state.MenuFetcher.MenuList);
-  const [showOffCanvas, setShowOffCanvas] = useState(false);
-  const [menuboxerror, setmenuboxerror] = useState(false);
+  // const [showOffCanvas, setShowOffCanvas] = useState(false);
+  // const [menuboxerror, setmenuboxerror] = useState(false);
   const [Breakfast, setbreakfast] = useState(true);
   const [Lunch, setlunch] = useState(false);
   const [Dinner, setdinner] = useState(false);
@@ -59,9 +59,9 @@ function MenuPage(props) {
     setdinner(true);
   };
 
-  const toggleOffCanvas = () => {
-    setShowOffCanvas(!showOffCanvas);
-  };
+  // const toggleOffCanvas = () => {
+  //   setShowOffCanvas(!showOffCanvas);
+  // };
   // const [width, setWindowWidth] = useState(0);
   // const [cartshow, setcartshow] = useState(true);
   // const [cartbtn, setcartbtn] = useState(false);
@@ -190,7 +190,6 @@ function MenuPage(props) {
                 (item) => {
                   return (
                     <Menubox
-                      onerror={menuboxerror}
                       name={item.Item}
                       price={item.Price}
                       showaddbtn={showaddbtn}

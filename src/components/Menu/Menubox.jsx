@@ -1,24 +1,11 @@
 import React from "react";
 import menustyle from "./menupage.module.css";
-import image from "./intropic.webp";
-import { useState, useEffect } from "react";
-import AddQuantity from "./Addquantity";
-import tick from "./tick.png";
+// import { useState} from "react";
 import veg from "./veg.svg";
 function Menubox(props) {
-  const [match, setmatch] = useState(
-    window.matchMedia("(min-width:768px)").matches
-  );
-
-  useEffect(() => {
-    window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-      setmatch(e.matches);
-      // console.log("Current width:", e.matches);
-    });
-  });
-  const showaddbtn = props.showaddbtn;
-  const [quantity, setquantity] = useState(0);
-  const [selected, setselected] = useState(false);
+  // const showaddbtn = props.showaddbtn;
+  // const [quantity, setquantity] = useState(0);
+  // const [selected, setselected] = useState(false);
   function cap(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -27,14 +14,14 @@ function Menubox(props) {
   //   setselected(!selected);
   // };
   const itemprice = props.price;
-  function handleincrease() {
-    setquantity(quantity + 1);
-  }
-  function handledecrease() {
-    if (quantity !== 0) {
-      setquantity(quantity - 1);
-    }
-  }
+  // function handleincrease() {
+  //   setquantity(quantity + 1);
+  // // }
+  // function handledecrease() {
+  //   if (quantity !== 0) {
+  //     setquantity(quantity - 1);
+  //   }
+  // }
 
   return (
     <>
