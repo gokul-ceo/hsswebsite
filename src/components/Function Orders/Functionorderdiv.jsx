@@ -103,15 +103,10 @@ function Functionorderdiv(props) {
 
           {visible ? (
             <p ref={welcometext}>
-              Delicious food, delivered to your special event - satisfaction
-              guaranteed.
+              Mouthwatering dishes for your special moments.Celebrate your
+              beautiful life moments with us!.
               <div>
-                <span>
-                  Relax and enjoy your special events while we take care of the
-                  food preparation and delivery - our expert chefs will create
-                  mouth-watering dishes that will leave your guests wanting
-                  more.
-                </span>
+                <span>Get the guests talking!</span>
               </div>
               <button onClick={() => dispatch(SHOW_CONTACT_FORM())}>
                 Request a Call <img src={next} alt="arrow" />{" "}
